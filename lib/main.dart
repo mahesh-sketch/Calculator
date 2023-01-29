@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'alllist.dart';
 import 'package:math_expressions/math_expressions.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  void equalpressed(){
+  void equalpressed() {
     String finalques = ques;
     Parser p = Parser();
     Expression exp = p.parse(finalques);
@@ -115,17 +116,27 @@ class _MyHomePageState extends State<MyHomePage> {
                           Padding(
                             padding: const EdgeInsets.only(left: 18.0),
                             child: Container(
-                              child: Text(ques, style: TextStyle(fontSize: 20,color: _istap ? Colors.white:Colors.black),
+                              // color: Colors.black,
+                              child: Text(
+                                ques,
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color:
+                                        _istap ? Colors.white : Colors.black),
                               ),
                               alignment: Alignment.topLeft,
                             ),
                           ),
                           Padding(
                             padding:
-                            const EdgeInsets.only(right: 18.0, bottom: 10),
+                                const EdgeInsets.only(right: 18.0, bottom: 10),
                             child: Container(
                               child: Text(ans,
-                                  style: TextStyle(fontSize: 20,color: _istap ? Colors.white:Colors.black)),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: _istap
+                                          ? Colors.white
+                                          : Colors.black)),
                               alignment: Alignment.bottomRight,
                             ),
                           ),
